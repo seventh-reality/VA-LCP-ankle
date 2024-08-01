@@ -25,9 +25,9 @@
         <button class="slide selected" id="1" onclick="switchSrc(1,'1.glb')" style="float:right;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button>
 	 <a class="slide selected" id="11" onclick-"switchSrc('1.glb')"></a>  
         <button class="slide" id="2" onclick="switchSrc(2,'2.glb')" style="float:right;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button>
-	 <a class="slide selected" id="11" onclick-"switchSrc('2.glb')"></a>     
+	 <a class="slide selected" id="22" onclick-"switchSrc('2.glb')"></a>     
         <button class="slide selected" id="3" onclick="switchSrc(3,'3.glb')"  style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button>
-	 <a class="slide selected" id="11" onclick-"switchSrc('3.glb')"></a>     
+	 <a class="slide selected" id="33" onclick-"switchSrc('3.glb')"></a>     
        
    
     </model-viewer>
@@ -75,6 +75,9 @@
         switch (indx) {
             case 2:
 		document.getElementById("1").style.setProperty('display','inline');
+		document.getElementById("11").style.setProperty('display','inline');
+		document.getElementById("22").style.setProperty('display','none');
+		document.getElementById("33").style.setProperty('display','none');	
 		document.getElementById("1").style.setProperty('float','left');	
                 document.getElementById("2").style.setProperty('display','inline');
 		document.getElementById("2").style.setProperty('float','left');
@@ -84,6 +87,9 @@
                 break;
 		case 3:
 		document.getElementById("1").style.setProperty('display','inline');
+		document.getElementById("11").style.setProperty('display','none');
+		document.getElementById("22").style.setProperty('display','inline');
+		document.getElementById("33").style.setProperty('display','none');	
 		document.getElementById("1").style.setProperty('float','left');	
                 document.getElementById("2").style.setProperty('display','inline');
 		document.getElementById("2").style.setProperty('float','left');
@@ -93,6 +99,9 @@
                 break;
 		case 3:
 		document.getElementById("1").style.setProperty('display','inline');
+		document.getElementById("11").style.setProperty('display','none');
+		document.getElementById("22").style.setProperty('display','none');
+		document.getElementById("33").style.setProperty('display','inline');	
 		document.getElementById("1").style.setProperty('float','left');	
                 document.getElementById("2").style.setProperty('display','inline');
 		document.getElementById("2").style.setProperty('float','left');
