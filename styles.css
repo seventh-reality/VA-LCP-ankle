@@ -21,6 +21,11 @@ body {
   overflow: inherit;
   color: #000000;
 }
+#post{
+  position: sticky;
+  top: 100%;
+  transform: translateX(-175%);
+}
 
 model-viewer {
   width: 100%;
