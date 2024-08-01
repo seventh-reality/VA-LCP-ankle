@@ -226,7 +226,7 @@ button {
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
-  top: 80%;
+  top: 100%;
 }
 button1 {
   border: 1px outset #ffffff00;
@@ -235,7 +235,7 @@ button1 {
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
-  top: 80%;
+  top: 100%;
   transform: translateX(-175%);
 }
 button2 {
@@ -245,7 +245,7 @@ button2 {
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
-  top: 80%;
+  top: 100%;
 }
 
 button:hover {
