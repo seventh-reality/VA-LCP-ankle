@@ -115,7 +115,8 @@ height: 60px;
   background-color: #fff;
   
   left: 50%;
-  transform: translateX(-75%);
+  transform: translateX(-50%);
+   transform: translateY(50%);
   white-space: nowrap;
   bottom: 50px;
   padding: 0px 16px 0px 40px;
