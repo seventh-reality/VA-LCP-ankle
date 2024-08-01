@@ -236,7 +236,7 @@ button1 {
   font-weight: 600;
   position: sticky;
   top: 80%;
-  transform: translate3d(50%, 0%, 0);
+  transform: translateX(-175%);
 }
 button2 {
   border: 1px outset #ffffff00;
