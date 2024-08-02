@@ -128,7 +128,7 @@ function play_to_end (){
 	const modelViewer = document.querySelector('#toggle-model');
 	modelViewer.play();
 	t=modelViewer.duration;
-	t=t*1050/1 ;// because duration is in second and time to play and rewind//
+	t=t*1000/1 ;// because duration is in second and time to play and rewind//
 	setTimeout(stop, t);
 }
 function stop(){
