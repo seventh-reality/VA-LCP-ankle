@@ -31,11 +31,11 @@
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
       </div>   
 	
-        <button class="slide selected" id="1" onclick="switchSrc(1,'Boon_anim.glb')" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button class="slide selected" id="1" onclick="switchSrc(1,'Boon_anim.glb')" onclick="play_to_end()" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button>
 	 <a class="slide selected" id="11" onclick-"switchSrc('Boon_anim.glb')"></a>  
         <button1 class="slide selected" id="2" onclick="switchSrc(2,'Bone_Plate.glb')" style="float:right";><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button1>
 	 <a class="slide selected" id="22" onclick-"switchSrc('Bone_Plate.glb')"></a>     
-        <button2 class="slide selected" id="3" onclick="play_to_end()" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button2>
+        <button2 class="slide selected" id="3" onclick="switchSrc(3,'Foot.glb')" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button2>
 	 <a class="slide selected" id="33" onclick-"switchSrc('Foot.glb')"></a>     
         
       <div id="ar-prompt">
@@ -128,7 +128,7 @@ function play_to_end (){
 	const modelViewer = document.querySelector('#toggle-model');
 	modelViewer.play();
 	t=modelViewer.duration;
-	t=t*200/2 ;// because duration is in second and time to play and rewind//
+	t=t*1000/2 ;// because duration is in second and time to play and rewind//
 	setTimeout(stop, t);
 }
 function stop(){
