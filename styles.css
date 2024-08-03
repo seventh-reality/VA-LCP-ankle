@@ -261,11 +261,17 @@ button:hover {
 button1:hover {
   background-color: #ccf;
 }
+button2:hover {
+  background-color: #ccf;
+}
 
 button.disabled {
   background-color: #ccc;
 }
 button1.disabled {
+  background-color: #ccc;
+}
+button2.disabled {
   background-color: #ccc;
 }
 
