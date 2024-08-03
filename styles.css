@@ -256,23 +256,23 @@ button2 {
 }
 
 button:hover {
-  background-color: #ccf;
+  background-color: #92cfc2;
 }
 button1:hover {
-  background-color: #ccf;
+  background-color: #92cfc2;
 }
 button2:hover {
-  background-color: #ccf;
+  background-color: #92cfc2;
 }
 
 button.disabled {
-  background-color: #ccc;
+  background-color: #92cfc2;
 }
 button1.disabled {
-  background-color: #ccc;
+  background-color: #92cfc2;
 }
 button2.disabled {
-  background-color: #ccc;
+  background-color: #92cfc2;
 }
 
   #lazy-load-poster {
