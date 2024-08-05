@@ -254,7 +254,7 @@ button2 {
   transform: translateX(50%);
 }
 
-button3:hover {
+button:hover {
   background-color: #92cfc2;
 }
 button1:hover {
@@ -264,7 +264,7 @@ button2:hover {
   background-color: #92cfc2;
 }
 
-button3.disabled {
+button.disabled {
   background-color: #92cfc2;
 }
 button1.disabled {
