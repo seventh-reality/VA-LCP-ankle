@@ -21,9 +21,9 @@
 	 <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
-      <button slot="ar-button" id="ar-button">
+      <button3 slot="ar-button" id="ar-button">
         View in 4D
-    </button>
+      </button3>
 	 <div id="button" style = "display:flex; justify-content: space-between;">
           <img src="4.png"  align="center" style="width:100px;  padding-left: 5px;padding-top: 0px;"/>
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
@@ -126,7 +126,7 @@ function play_to_end (){
 	const modelViewer = document.querySelector('#toggle-model');
 	modelViewer.play();
 	t=modelViewer.duration;
-	t=t*925/1 ;// because duration is in second and time to play and rewind//
+	t=t*950/1 ;// because duration is in second and time to play and rewind//
 	setTimeout(stop, t);
 }
 function stop(){
