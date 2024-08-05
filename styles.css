@@ -233,6 +233,15 @@ button {
   top: 100%;
   transform: translateX(-20%);
 }
+button3 {
+  border: 1px outset #ffffff00;
+  background-color: #fff0; 
+  border-radius: 6px;
+  font-weight: 600;
+  position: sticky;
+  top: 100%;
+  transform: translateX(-50%);
+}
 button1 {
   border: 1px outset #ffffff00;
   background-color: #fff0;
@@ -241,7 +250,7 @@ button1 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(-160%);
+  transform: translateX(-180%);
 }
 button2 {
   border: 1px outset #ffffff00;
@@ -254,7 +263,7 @@ button2 {
   transform: translateX(50%);
 }
 
-button:hover {
+button3:hover {
   background-color: #92cfc2;
 }
 button1:hover {
@@ -264,7 +273,7 @@ button2:hover {
   background-color: #92cfc2;
 }
 
-button.disabled {
+button3.disabled {
   background-color: #92cfc2;
 }
 button1.disabled {
