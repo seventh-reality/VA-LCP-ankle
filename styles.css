@@ -223,18 +223,8 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-button4 {
-  border: 1px outset #ffffff00;
-  background-color: #fff0; 
-  border-radius: 6px;
-  font-weight: 600;
-  position: sticky;
-  top: 50%;
-  transform: translateX(-50%);
-  transform: translateY(-100%);
-}
 
-button3 {
+button {
   border: 1px outset #ffffff00;
   background-color: #fff0; 
   border-radius: 6px;
