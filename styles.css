@@ -229,7 +229,7 @@ button4 {
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
-  bottom: 50%;
+  top: 50%;
   transform: translateX(-50%);
   transform: translateY(-100%);
 }
