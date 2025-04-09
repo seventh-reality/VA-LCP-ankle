@@ -241,7 +241,7 @@ button3 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(-50%);
+  transform: translateX(-90%);
 }
 button1 {
   border: 1px outset #ffffff00;
@@ -251,7 +251,7 @@ button1 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(-180%);
+  transform: translateX(-260%);
 }
 button2 {
   border: 1px outset #ffffff00;
@@ -261,7 +261,7 @@ button2 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(50%);
+  transform: translateX(90%);
 }
 
 button3:hover {
