@@ -6,60 +6,14 @@
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
-	    <style>
-        h5 {
-            text-align: center;
-            margin-top: -5px;
-            font-size: 9px;
-            color: #636363; /* Improves visibility */
-        }
-
-        .attributiontwo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        .attributiontwo span {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-        }
-
-        .attributiontwo a {
-            margin: 15px;
-            text-decoration: none; /* Removes underline */
-           -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
-        }
-
-        .icon {
-            width: 43px;
-            height: 43px;            
-        }
-        .icon:hover {
-            transform: scale(1.1);         
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .attributiontwo {
-                padding: 15px;
-            }
-            .icon {
-                width: 43px;
-                height: 43px;
-            }
-        }
-    </style>
-	<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "r1w39gktch");
-</script>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="./src/threejs_wasm_worker.js"></script>
+    <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>	
+    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>	
 </head>
 <body>
     <div id="card">
@@ -70,6 +24,7 @@
 	<button slot="ar-button" id="ar-button">
         View in 4D
         </button>    
+      
 	 <div id="button" style = "display:flex; justify-content: space-between;">
           <img src="4.png"  align="center" style="width:100px;  padding-left: 5px;padding-top: 0px;"/>
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
@@ -87,16 +42,15 @@
       </div>
     </model-viewer>
     <section class="attributiontwo">
-        <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">   
+        <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
+       
        <span>
-         <a href="https://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide-2.7mm_3.5mm%20Variable%20Angle%20LCP%20Ankle%20Trauma%20System.pdf">
-		 <img src="Brochure_1.png" class="icon" ></a>
-         <a href="https://www.youtube.com/watch?v=kbEdHIOcFlM">
-		 <img src="Video_1.png" class="icon" ></a>
-         <a href="https://www.jnjmedtech.com/en-US/product/variable-angle-ankle-trauma-system">
-		 <img src="web_1.png" class="icon" ></a>
-         <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link">
-		 <img src="form_1.png" class="icon" ></a>       
+         <a href="https://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide-2.7mm_3.5mm%20Variable%20Angle%20LCP%20Ankle%20Trauma%20System.pdf"><img src="Brochure.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 17px;padding-top: 0px;"></a>
+         <a href="https://www.youtube.com/watch?v=kbEdHIOcFlM"><img src="Video.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+         <a href="https://www.jnjmedtech.com/en-US/product/variable-angle-ankle-trauma-system"><img src="web.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+         <a href="https://drive.google.com/file/d/1hFf5OK8XdV_q6UZ7WFcwiR3xrxWkUQ4Z/view?usp=sharing"><img src="serch.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link"><img src="form.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+             
        </span>
     
     </section>        
@@ -182,20 +136,13 @@ modelViewer.pause();
 }
 
 </script>    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9VKJF2MN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D9VKJF2MN4');
-</script>	    
+	    
 	    
 	       
-</dev>   
+</dev> 
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="script.js"></script>
-  <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>	    
 </body>
 </html>
