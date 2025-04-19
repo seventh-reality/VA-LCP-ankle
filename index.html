@@ -1,210 +1,175 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <title>VA LCP ankle</title>
-    <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <script src="./src/threejs_wasm_worker.js"></script>
-    <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>	
-    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
-	    <style>
-        h5 {
-            text-align: center;
-            margin-top: -5px;
-            font-size: 9px;
-            color: #636363; /* Improves visibility */
-        }
+  <title>VA LCP ankle</title>
+  <meta charset="utf-8">
+  <meta name="description" content="<model-viewer> template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="./styles.css" rel="stylesheet"/>
 
-        .attributiontwo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-        }
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="./src/threejs_wasm_worker.js"></script>
+  <script src="https://developers.google.com/ar/develop/java/scene-viewer"></script>
+  <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
 
-        .attributiontwo span {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-        }
-
-        .attributiontwo a {
-            margin: 15px;
-            text-decoration: none; /* Removes underline */
-           -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
-        }
-
-        .icon {
-            width: 43px;
-            height: 43px;            
-        }
-        .icon:hover {
-            transform: scale(1.1);         
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .attributiontwo {
-                padding: 15px;
-            }
-            .icon {
-                width: 43px;
-                height: 43px;
-            }
-        }
-    </style>
-	<script type="text/javascript">
+  <!-- Clarity -->
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "r1w39gktch");
-</script>
+  </script>
+
+  <!-- Styles -->
+  <style>
+    h5 {
+      text-align: center;
+      margin-top: -5px;
+      font-size: 9px;
+      color: #636363;
+    }
+
+    .attributiontwo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .attributiontwo span {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    .attributiontwo a {
+      margin: 15px;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .icon {
+      width: 43px;
+      height: 43px;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .attributiontwo {
+        padding: 15px;
+      }
+
+      .icon {
+        width: 43px;
+        height: 43px;
+      }
+    }
+  </style>
+
+  <!-- model-viewer module -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 </head>
+
 <body>
-    <div id="card">
-    <model-viewer id="toggle-model" src="Foot.glb"  ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity="1"  touch-action="pan-y"  environment-image="music_hall_01_1k.hdr">
-	 <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-         </div>
-	<button slot="ar-button" id="ar-button">
+  <div id="card">
+    <model-viewer 
+      id="toggle-model"
+      src="Foot.glb"
+      ios-src="Foot.usdz"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      alt="3D Model"
+      shadow-intensity="1"
+      touch-action="pan-y"
+      environment-image="music_hall_01_1k.hdr"
+    >
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+
+      <button slot="ar-button" id="ar-button">
         View in 4D
-        </button>    
-	 <div id="button" style = "display:flex; justify-content: space-between;">
-          <img src="4.png"  align="center" style="width:100px;  padding-left: 5px;padding-top: 0px;"/>
-	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
-         </div>   
-	
-        <button3 class="slide selected" id="1" onclick="switchSrc(1,'Boon_anim.glb',play_to_end())" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
-	 <a class="slide selected" id="11" onclick-"switchSrc('Boon_anim.glb')"></a>  
-        <button1 class="slide selected" id="2" onclick="switchSrc(2,'Bone_Plate.glb')" style="float:inline-end";><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button1>
-	 <a class="slide selected" id="22" onclick-"switchSrc('Bone_Plate.glb')"></a>     
-        <button2 class="slide selected" id="3" onclick="switchSrc(3,'Foot.glb')" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button2>
-	 <a class="slide selected" id="33" onclick-"switchSrc('Foot.glb')"></a>     
-        
+      </button>
+
+      <div id="button" style="display:flex; justify-content: space-between;">
+        <img src="4.png" style="width:100px; padding-left: 5px;" />
+        <img src="iitname.png" style="width:100px; padding-right: 0px;" />
+      </div>
+
+      <button class="slide selected" id="1" onclick="switchSrc(1, 'Boon_anim.glb'); play_to_end()" style="float:right;">
+        <img src="Icon_2.png" style="width:40px;height:40px;">
+      </button>
+
+      <button class="slide selected" id="2" onclick="switchSrc(2, 'Bone_Plate.glb')" style="float:right;">
+        <img src="Icon_1.png" style="width:40px;height:40px;">
+      </button>
+
+      <button class="slide selected" id="3" onclick="switchSrc(3, 'Foot.glb')" style="float:left;">
+        <img src="Icon.png" style="width:40px;height:40px;">
+      </button>
+
       <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+        <img src="ar_hand_prompt.png">
       </div>
     </model-viewer>
+
     <section class="attributiontwo">
-        <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">   
-       <span>
-         <a href="https://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide-2.7mm_3.5mm%20Variable%20Angle%20LCP%20Ankle%20Trauma%20System.pdf">
-		 <img src="Brochure_1.png" class="icon" ></a>
-         <a href="https://www.youtube.com/watch?v=kbEdHIOcFlM">
-		 <img src="Video_1.png" class="icon" ></a>
-         <a href="https://www.jnjmedtech.com/en-US/product/variable-angle-ankle-trauma-system">
-		 <img src="web_1.png" class="icon" ></a>
-         <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link">
-		 <img src="form_1.png" class="icon" ></a>       
-       </span>
-    
-    </section>        
-    
-<script>
-    
-    const models = ['Foot.glb', 'Bone_Plate.glb', 'Boon_anim.glb'];
+      <p style="background-image: url('black.png'); width:60px;height:60px; padding-left: 0px;padding-top: 10px;"></p>
+      <span>
+        <a href="https://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide-2.7mm_3.5mm%20Variable%20Angle%20LCP%20Ankle%20Trauma%20System.pdf">
+          <img src="Brochure_1.png" class="icon">
+        </a>
+        <a href="https://www.youtube.com/watch?v=kbEdHIOcFlM">
+          <img src="Video_1.png" class="icon">
+        </a>
+        <a href="https://www.jnjmedtech.com/en-US/product/variable-angle-ankle-trauma-system">
+          <img src="web_1.png" class="icon">
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link">
+          <img src="form_1.png" class="icon">
+        </a>
+      </span>
+    </section>
+  </div>
+
+  <!-- Script for model switching -->
+  <script>
     const toggleModel = document.querySelector('#toggle-model');
-    // let j = 0;
-    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
-    function switchSrc(indx,src){
-        // if(indx == 2){
-        //     document.getElementById("iitpl").style.setProperty('display','none');
-        //     document.getElementById("tna").style.setProperty('display','none');
-        //     document.getElementById("Brochure").style.setProperty('display','inline');
-        //     document.getElementById("tna2").style.setProperty('display','inline');
-        //     document.getElementById("tna2").style.setProperty('float','right');
-        // }else if(indx== 3){
-        //     document.getElementById("iitpl").setAttribute('style','display:inline');
-        //     document.getElementById("tna").setAttribute('style','display:inline');
-        //     document.getElementById("tna").style.setProperty('float','right');
-        //     document.getElementById("Brochure").setAttribute('style','display:none');
-        //     document.getElementById("tna2").setAttribute('style','display:none');
-        // }else if(indx== 5){
-        //     document.getElementById("iitpl").setAttribute('style','display:inline');
-        //     document.getElementById("tna").setAttribute('style','display:inline');
-        //     document.getElementById("tna").style.setProperty('float','right');
-        // }
-                document.getElementById("1").style.setProperty('display','inline');
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-        switch (indx) {
-            case 2:
-		document.getElementById("1").style.setProperty('display','inline');
-		document.getElementById("11").style.setProperty('display','inline');
-		document.getElementById("22").style.setProperty('display','none');
-		document.getElementById("33").style.setProperty('display','none');	
-			
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-		
-                
-                break;
-		case 3:
-		document.getElementById("1").style.setProperty('display','inline');
-		document.getElementById("11").style.setProperty('display','none');
-		document.getElementById("22").style.setProperty('display','inline');
-		document.getElementById("33").style.setProperty('display','none');		
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-   
-                break;
-		case 3:
-		document.getElementById("1").style.setProperty('display','inline');
-		document.getElementById("11").style.setProperty('display','none');
-		document.getElementById("22").style.setProperty('display','none');
-		document.getElementById("33").style.setProperty('display','inline');		
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');       
-                break;		  
-            default:
-                document.getElementById("1").style.setProperty('display','inline');
-	        document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-		
-            break;
-        }
-        toggleModel.setAttribute('src', `${src}`);  
+
+    function switchSrc(indx, src) {
+      toggleModel.setAttribute('src', src);
     }
-</script>
-<script>
-function play_to_end (){
-//play to end or rewind if animation is at end//
-	const modelViewer = document.querySelector('#toggle-model');
-	modelViewer.play();
-	t=modelViewer.duration;
-	t=t*1000/1 ;// because duration is in second and time to play and rewind//
-	setTimeout(stop, t);
-}
-function stop(){
-const modelViewer = document.querySelector('#toggle-model');
-modelViewer.pause();
-}
 
-</script>    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9VKJF2MN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    function play_to_end() {
+      const modelViewer = document.querySelector('#toggle-model');
+      modelViewer.play();
+      const t = modelViewer.duration * 1000;
+      setTimeout(stop, t);
+    }
 
-  gtag('config', 'G-D9VKJF2MN4');
-</script>	    
-	    
-	       
-</dev> 
-    
-    
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-    <script src="script.js"></script>
+    function stop() {
+      const modelViewer = document.querySelector('#toggle-model');
+      modelViewer.pause();
+    }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9VKJF2MN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D9VKJF2MN4');
+  </script>
 </body>
 </html>
