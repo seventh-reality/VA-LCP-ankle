@@ -112,18 +112,20 @@ height: 60px;
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 12px 50%;
-  background-color: #efefef;
-  position: absolute;
+  background-color: #ffffff87;
+  left: 30%;
+  transform: translateX(-50%);
+  transform: translateY(-200%);
   white-space: nowrap;
+  bottom: 16px;
   padding: 0px 16px 0px 40px;
-  font-family: Roboto Regular, Helvetica Neue, sans-serif;
-  font-size: 14px;
-  color:#636363;
+  font-family: FontFont_FF.Mark.Pro.otf;
+  font-size: 11px;
+  color:#000000;
   height: 36px;
   line-height: 36px;
   border-radius: 18px;
   border: 1px solid #DADCE0;
-  box-shadow: -.5px .5px 1px rgba(0, 0, 0, 1);
 }
 
 #ar-button:active {
@@ -238,7 +240,7 @@ button3 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(-90%);
+  transform: translateX(-50%);
 }
 button1 {
   border: 1px outset #ffffff00;
@@ -248,7 +250,7 @@ button1 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(-260%);
+  transform: translateX(-180%);
 }
 button2 {
   border: 1px outset #ffffff00;
@@ -258,7 +260,7 @@ button2 {
   font-weight: 600;
   position: sticky;
   top: 100%;
-  transform: translateX(90%);
+  transform: translateX(50%);
 }
 
 button3:hover {
