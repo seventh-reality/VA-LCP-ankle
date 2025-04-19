@@ -12,12 +12,7 @@
     <script src="https://threejs.org/build/three.min.js"></script>
     <script src="./src/threejs_wasm_worker.js"></script>
     <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
-    <style>
-        .slide.selected {
-            border: 2px solid #00f;
-            border-radius: 8px;
-        }
-    </style>
+
 </head>
 <body>
     <div id="card">
@@ -43,13 +38,13 @@
             </div>
 
             <div style="position: absolute; bottom: 10px; left: 50%; transform: translate(-45%, 0); display: flex; justify-content: center; align-items: center; gap: 20px; z-index: 1000;">
-                <button class="slide selected" onclick="switchSrc(this, 'Boon_anim.glb')">
+                <button class="slide selected" onclick="switchSrc(this, 'Foot.glb')">
                     <img src="Icon.png" alt="Leg" style="width: 40px; height: 40px;">
                 </button>
                 <button class="slide" onclick="switchSrc(this, 'Bone_Plate.glb')">
                     <img src="Icon_1.png" alt="Hip" style="width: 40px; height: 40px;">
                 </button>
-                <button class="slide" onclick="switchSrc(this, 'Foot.glb')">
+                <button class="slide" onclick="switchSrc(this, 'Boon_anim.glb')">
                     <img src="Icon_2.png" alt="Animation" style="width: 40px; height: 40px;">
                 </button>
             </div>
