@@ -6,14 +6,6 @@
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
-    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <script src="./src/threejs_wasm_worker.js"></script>
-    <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>	
-    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
 	    <style>
         h5 {
             text-align: center;
@@ -201,8 +193,9 @@ modelViewer.pause();
 </script>	    
 	    
 	       
-</dev>  
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</dev>   
     <script src="script.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>	    
 </body>
 </html>
