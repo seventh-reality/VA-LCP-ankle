@@ -1,59 +1,72 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <title>VA LCP ankle</title>
+    <title>VA LCP Ankle</title>
     <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="description" content="<model-viewer> template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
-    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="https://threejs.org/build/three.min.js"></script>
     <script src="./src/threejs_wasm_worker.js"></script>
-    <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>	
-    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>	
+    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+    <style>
+        .slide.selected {
+            border: 2px solid #00f;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <div id="card">
-    <model-viewer id="toggle-model" src="Foot.glb"  ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity="1"  touch-action="pan-y"  environment-image="music_hall_01_1k.hdr">
-	 <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-         </div>
-	<button slot="ar-button" id="ar-button">
-        View in 4D
-        </button>    
-      
-	 <div id="button" style = "display:flex; justify-content: space-between;">
-          <img src="4.png"  align="center" style="width:100px;  padding-left: 5px;padding-top: 0px;"/>
-	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
-         </div>   
-	
-        <div style="position: absolute; bottom: 10px; left: 50%; transform: translate(-45%, 0); display: flex; justify-content: center; align-items: center; gap: 20px; z-index: 1000;">
-                <button class="slide selected" id="3" onclick="switchSrc(3,'Boon_anim.glb')" style="background: none; border: none;">
+        <model-viewer id="toggle-model"
+            src="Foot.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            alt=""
+            shadow-intensity="1"
+            touch-action="pan-y"
+            environment-image="music_hall_01_1k.hdr">
+            
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+
+            <button slot="ar-button" id="ar-button">View in 4D</button>
+
+            <div id="button" style="display:flex; justify-content: space-between;">
+                <img src="4.png" style="width:100px; padding-left: 5px;"/>
+                <img src="iitname.png" style="width:100px; padding-right: 0px;"/>
+            </div>
+
+            <div style="position: absolute; bottom: 10px; left: 50%; transform: translate(-45%, 0); display: flex; justify-content: center; align-items: center; gap: 20px; z-index: 1000;">
+                <button class="slide selected" onclick="switchSrc(this, 'Boon_anim.glb')">
                     <img src="Icon.png" alt="Leg" style="width: 40px; height: 40px;">
                 </button>
-                <button class="slide selected" id="2" onclick="switchSrc(2,'Bone_Plate.glb')" style="background: none; border: none;">
+                <button class="slide" onclick="switchSrc(this, 'Bone_Plate.glb')">
                     <img src="Icon_1.png" alt="Hip" style="width: 40px; height: 40px;">
                 </button>
-                <button class="slide selected" id="1" onclick="switchSrc(1,'Foot.glb')" style="background: none; border: none;">
+                <button class="slide" onclick="switchSrc(this, 'Foot.glb')">
                     <img src="Icon_2.png" alt="Animation" style="width: 40px; height: 40px;">
                 </button>
             </div>
-        
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
-    </model-viewer>
-    <section class="attributiontwo" style="text-align: center; padding: 10px; transform: translateY(-20px);">
+
+            <div id="ar-prompt">
+                <img src="ar_hand_prompt.png">
+            </div>
+        </model-viewer>
+
+        <section class="attributiontwo" style="text-align: center; padding: 10px; transform: translateY(-20px);">
             <p style="background-image: url('black.png'); display: inline-block; padding: 10px;">
                 <span style="display: flex; justify-content: center; gap: 20px; align-items: center;">
                     <a href="https://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide-2.7mm_3.5mm%20Variable%20Angle%20LCP%20Ankle%20Trauma%20System.pdf">
-                        <img src="Brochure_1.png" alt="Brochure_1" style="width:40px;height:40px;">
+                        <img src="Brochure_1.png" alt="Brochure" style="width:40px;height:40px;">
                     </a>
                     <a href="https://www.youtube.com/watch?v=kbEdHIOcFlM">
-                        <img src="Video_1.png" alt="Video_1" style="width:40px;height:40px;">
+                        <img src="Video_1.png" alt="Video" style="width:40px;height:40px;">
                     </a>
                     <a href="https://www.jnjmedtech.com/en-US/product/variable-angle-ankle-trauma-system">
                         <img src="web_1.png" alt="Website" style="width:40px;height:40px;">
@@ -64,92 +77,31 @@
                 </span>
             </p>
         </section>
-    
-<script>
-    
-    const models = ['Foot.glb', 'Bone_Plate.glb', 'Boon_anim.glb'];
-    const toggleModel = document.querySelector('#toggle-model');
-    // let j = 0;
-    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
-    function switchSrc(indx,src){
-        // if(indx == 2){
-        //     document.getElementById("iitpl").style.setProperty('display','none');
-        //     document.getElementById("tna").style.setProperty('display','none');
-        //     document.getElementById("Brochure").style.setProperty('display','inline');
-        //     document.getElementById("tna2").style.setProperty('display','inline');
-        //     document.getElementById("tna2").style.setProperty('float','right');
-        // }else if(indx== 3){
-        //     document.getElementById("iitpl").setAttribute('style','display:inline');
-        //     document.getElementById("tna").setAttribute('style','display:inline');
-        //     document.getElementById("tna").style.setProperty('float','right');
-        //     document.getElementById("Brochure").setAttribute('style','display:none');
-        //     document.getElementById("tna2").setAttribute('style','display:none');
-        // }else if(indx== 5){
-        //     document.getElementById("iitpl").setAttribute('style','display:inline');
-        //     document.getElementById("tna").setAttribute('style','display:inline');
-        //     document.getElementById("tna").style.setProperty('float','right');
-        // }
-                document.getElementById("1").style.setProperty('display','inline');
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-        switch (indx) {
-            case 2:
-		document.getElementById("1").style.setProperty('display','inline');
-		document.getElementById("11").style.setProperty('display','inline');
-		document.getElementById("22").style.setProperty('display','none');
-		document.getElementById("33").style.setProperty('display','none');	
-			
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-		
-                
-                break;
-		case 3:
-		document.getElementById("1").style.setProperty('display','inline');
-		document.getElementById("11").style.setProperty('display','none');
-		document.getElementById("22").style.setProperty('display','inline');
-		document.getElementById("33").style.setProperty('display','none');		
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-   
-                break;
-		case 3:
-		document.getElementById("1").style.setProperty('display','inline');
-		document.getElementById("11").style.setProperty('display','none');
-		document.getElementById("22").style.setProperty('display','none');
-		document.getElementById("33").style.setProperty('display','inline');		
-                document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');       
-                break;		  
-            default:
-                document.getElementById("1").style.setProperty('display','inline');
-	        document.getElementById("2").style.setProperty('display','inline');
-                document.getElementById("3").style.setProperty('display','inline');
-		
-            break;
-        }
-        toggleModel.setAttribute('src', `${src}`);  
-    }
-</script>
-<script>
-function play_to_end (){
-//play to end or rewind if animation is at end//
-	const modelViewer = document.querySelector('#toggle-model');
-	modelViewer.play();
-	t=modelViewer.duration;
-	t=t*1000/1 ;// because duration is in second and time to play and rewind//
-	setTimeout(stop, t);
-}
-function stop(){
-const modelViewer = document.querySelector('#toggle-model');
-modelViewer.pause();
-}
+    </div>
 
-</script>    
-	    
-	    
-	       
-</dev> 
+    <!-- Model switching script -->
+    <script>
+        function switchSrc(button, src) {
+            const toggleModel = document.querySelector('#toggle-model');
+            toggleModel.setAttribute('src', src);
+
+            // Highlight the selected button
+            document.querySelectorAll('.slide').forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+        }
+    </script>
+
+    <!-- Play to end function -->
+    <script>
+        function play_to_end() {
+            const modelViewer = document.querySelector('#toggle-model');
+            modelViewer.play();
+            const t = modelViewer.duration * 1000;
+            setTimeout(() => modelViewer.pause(), t);
+        }
+    </script>
+
+    <!-- Scripts -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
