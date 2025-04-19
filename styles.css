@@ -107,7 +107,7 @@ height: 60px;
   transition: width 0.3s;
 }
 
-#ar-button {
+.ar-button {
   background-image: url(ar_icon.png);
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -129,15 +129,15 @@ height: 60px;
   box-shadow: -.5px .5px 1px rgba(0, 0, 0, 1);
 }
 
-#ar-button:active {
+.ar-button:active {
   background-color: #E8EAED;
 }
 
-#ar-button:focus {
+.ar-button:focus {
   outline: none;
 }
 
-#ar-button:focus-visible {
+.ar-button:focus-visible {
   outline: 1px solid #4285f4;
 }
 
